@@ -9,6 +9,19 @@
 // Підказка: prompt завжди повертає рядок (String), тому перед перевіркою
 // перетворіть значення на число за допомогою Number().
 
+// const number = Number(prompt('Enter number'));
+// 1 var
+// if (number === 10) {
+//     alert('Вірно');
+// } else {
+//     alert('Невірно');
+// }
+// 2 var
+// number === 10 ? alert('Вірно') : alert('Невірно');
+
+// 3 var
+// alert(number === 10 ? 'Вірно' : 'Невірно');
+
 // Завдання 2:
 
 // У змінній min лежить випадкове число від 0 до 59.
@@ -18,6 +31,16 @@
 // "10 входить в першу чверть"
 
 // const min = Math.floor(Math.random() * (59 - 0) + 0);
+// if (min <= 15) {
+//     alert(`${min} входить в першу чверть.`);
+// } else if (min <= 30) {
+//     alert(`${min} входить в другу чверть.`);
+// } else if (min <= 45) {
+//     alert(`${min} входить в третю чверть.`);
+// } else if (min <= 60) {
+//     alert(`${min} входить в четверту чверть.`);
+// }
+
 
 // Завдання 3:
 
@@ -30,6 +53,28 @@
 // введе в prompt щось інше. В такому випадку result має набувати значення:
 // "Вибачте, але ви маєте ввести значення від 1 до 4 включно".
 // Значення змінної result виведіть в консоль.
+
+// const num = Number(prompt("Веедіть значення від 1-4"));
+// let result = '';
+//     switch (num) {
+//         case 1:
+//             result = 'зима.';
+//             break;
+//         case 2:
+//             result = 'весна.';
+//             break;
+//         case 3:
+//             result = 'літо.';
+//             break;
+//         case 4:
+//             result = 'осінь.';
+//             break;
+//         default:
+//             result = 'Вибачте, але ви маєте ввести значення від 1 до 4 включно.'
+// }
+//     console.log(result);
+    
+
 
 // Завдання 4:
 
@@ -56,6 +101,8 @@
 // то вивести в alert рядок "Добрий день!",
 // в іншому випадку вивести в alert рядок "Невірний пароль!"
 
+// const login = prompt("Веедіть ваш логін");
+
 // Завдання 6:
 
 // Використайте цикл while, щоб вивести в console всі числа від 0 до 20 включно.
@@ -69,11 +116,37 @@
 // Окрім цього, підрахуйте суму всіх парних чисел в цьому циклі
 // і поверніть її з функції.
 
+// function getNumbers(min, max) {
+//     let sum = 0;
+//     for (let i = max; i >= min; i--){
+//         console.log(i);
+//         if (i % 2 === 0) {
+//             sum += i;
+//         } 
+// }
+//     return sum;
+// }
+// console.log(getNumbers(13, 28));
+
 // Завдання 8:
 
 // Напишіть функцію min(a, b), яка приймає 2 числа і повертає меньше з них.
 // Потрібно додати перевірку, що функція отримує саме числа, в іншому випадку
 // повертати з функції рядок - 'Not a number!'.
+
+// function min(a, b) {
+//     if (typeof a === 'number' && typeof b === 'number') {
+//         if (a < b) {
+//           return a;  
+//         } else if (a > b) {
+//             return b;
+//         } else {
+//             return 'Not a number!';
+//         }
+//     } 
+// }
+// console.log(min(3, 8)); 
+
 
 // Завдання 9:
 
@@ -81,6 +154,36 @@
 // якщо параметр age більше чи дорівнює 18.
 // В іншому випадку вона запитує підтвердження через confirm
 // і повертає його результат (true/false).
+
+// const checkAge = confirm('Are you adult?');
+// console.log(checkAge);
+
+//1
+// function isAdult(age) {
+//     if (age >= 18) {
+//         return true;
+//     } else {
+//         const checkAge = confirm('Are you adult?');
+//         return checkAge;
+//     } 
+// }
+
+// //2
+// function isAdult(age) {
+//     if (age >= 18) {
+//         return true;
+//     } 
+//         return confirm('Are you adult?');
+//     } 
+
+//     //3
+// return age >= 18 ? true : confirm('Are you adult?');
+    
+// //4
+// return age >= 18 ? || confirm('Are you adult?');
+
+// console.log(isAdult(15));
+
 
 // Завдання 10:
 
